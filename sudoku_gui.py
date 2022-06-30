@@ -271,7 +271,7 @@ def main():
                         if board.is_finished():
                             tottime = format_time(play_time)
                             per = str(100*corrects/(corrects+strikes))
-                            print("Congrats!!\nYou won with "+per+"% Accuracy\nTime taken : "+tottime+ "\nGame over\n")
+                            print("Congrats!!\nYou won with "+per+"% Accuracy\nTries taken : "+str(corrects+strikes)+"\nTime taken : "+tottime+ "\nGame over\n")
                             run = False
 
             if event.type == pygame.MOUSEBUTTONDOWN:
