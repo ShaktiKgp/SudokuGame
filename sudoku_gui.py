@@ -3,26 +3,6 @@ import time
 import random
 pygame.font.init()
 
-def randomgenerator(n):
-    board = [[2,5,8,7,3,6,9,4,1],
-    [6,1,9,8,2,4,3,5,7],
-    [4,3,7,9,1,5,2,6,8],
-    [3,9,5,2,7,1,4,8,6],
-    [7,6,2,4,9,8,1,3,5],
-    [8,4,1,6,5,3,7,2,9],
-    [1,8,4,3,6,9,5,7,2],
-    [5,7,6,1,4,2,8,9,3],
-    [9,2,3,5,8,7,6,1,4]
-    ]
-    if n == 1: r = 63
-    if n == 2: r = 70
-    if n == 3: r = 77
-    for tc in range(r):
-        i = random.randint(0,8)
-        j = random.randint(0,8)
-        board[i][j] = 0
-    return board
-
 class Grid:
     def __init__(self, rows, cols, width, height, n):
         self.board = randomgenerator(n)
@@ -207,6 +187,27 @@ def find_empty(bo):
                 return (i, j)  # row, col
 
     return None
+
+
+def randomgenerator(n):
+    board = [[2,5,8,7,3,6,9,4,1],
+    [6,1,9,8,2,4,3,5,7],
+    [4,3,7,9,1,5,2,6,8],
+    [3,9,5,2,7,1,4,8,6],
+    [7,6,2,4,9,8,1,3,5],
+    [8,4,1,6,5,3,7,2,9],
+    [1,8,4,3,6,9,5,7,2],
+    [5,7,6,1,4,2,8,9,3],
+    [9,2,3,5,8,7,6,1,4]
+    ]
+    if n == 1: r = 63
+    if n == 2: r = 70
+    if n == 3: r = 77
+    for tc in range(r):
+        i = random.randint(0,8)
+        j = random.randint(0,8)
+        board[i][j] = 0
+    return board
 
 def main():
     while True:
