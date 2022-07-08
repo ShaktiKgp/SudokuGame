@@ -1,0 +1,1 @@
+A random valid Sudoku board is initialized according to the difficulty level set by the user. The algorithm uses backtracking to provide real-time validation for user inputs and block incorrect choices by the user. The GUI continously displays the time elapsed, and a detailed summary of the game.
